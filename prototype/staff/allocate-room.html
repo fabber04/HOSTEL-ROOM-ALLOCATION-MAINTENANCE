@@ -6,9 +6,19 @@
   <title>Allocate Room</title>
   <link rel="stylesheet" href="../styles.css" />
   <script>
-    function allocate(studentId) {
-      // Simulate allocation and send student to allocated status
-      window.location.href = '../student/request-status.html?state=allocated&studentId=' + encodeURIComponent(studentId);
+    function allocate(studentId, rowElement) {
+      // Simulate allocation - show success and update UI
+      const row = rowElement.closest('tr');
+      const actionCell = row.querySelector('td:last-child');
+      actionCell.innerHTML = '<span class="tag success">Allocated</span>';
+      
+      // Show success message
+      alert('Room allocated successfully! Student will be notified.');
+      
+      // Optionally redirect to dashboard after a moment
+      setTimeout(() => {
+        window.location.href = './dashboard.html';
+      }, 1000);
     }
   </script>
   </head>
@@ -36,11 +46,11 @@
         <tbody>
           <tr>
             <td>2025-001</td><td>Alpha</td><td>Single</td><td>Sem 1</td>
-            <td><button class="button success" onclick="allocate('N02528823X')">Allocate</button></td>
+            <td><button class="button success" onclick="allocate('N02528823X', this)">Allocate</button></td>
           </tr>
           <tr>
             <td>2025-017</td><td>Beta</td><td>Double</td><td>Sem 1</td>
-            <td><button class="button success" onclick="allocate('N023543422')">Allocate</button></td>
+            <td><button class="button success" onclick="allocate('N023543422', this)">Allocate</button></td>
           </tr>
         </tbody>
       </table>
