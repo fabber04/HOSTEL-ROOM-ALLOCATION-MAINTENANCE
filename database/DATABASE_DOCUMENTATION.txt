@@ -1,0 +1,52 @@
+DATABASE DOCUMENTATION
+Hostel Room Allocation and Maintenance System
+
+This document describes the database structure that would be needed for the full implementation.
+
+DATABASE OVERVIEW
+- Database Type: PostgreSQL (recommended) or MySQL
+- Purpose: Store user data, room allocations, maintenance requests, and system records
+
+MAIN ENTITIES
+
+1. Users
+   - Stores student and staff account information
+   - Fields: id, email, password_hash, name, role (student/staff/admin)
+   - Authentication: JWT-based
+
+2. Hostels
+   - Hostel building information
+   - Fields: id, name, address, capacity
+
+3. Rooms
+   - Individual room details
+   - Fields: id, hostel_id, room_number, room_type (single/double/triple/quad), capacity, floor, status (available/occupied/maintenance)
+
+4. Room Requests
+   - Student room allocation requests
+   - Fields: id, student_id, hostel_id, room_type, semester, special_requirements, status (pending/allocated/rejected)
+
+5. Room Allocations
+   - Active room assignments
+   - Fields: id, student_id, room_id, start_date, end_date, status (active/completed/cancelled)
+
+6. Maintenance Requests
+   - Maintenance work orders
+   - Fields: id, student_id, room_id, category (plumbing/electrical/hvac/furniture/other), description, urgency (low/medium/high/urgent), status (pending/in_progress/completed), assigned_to, staff_notes
+
+RELATIONSHIPS
+- Users → Room Requests (one-to-many)
+- Users → Room Allocations (one-to-many)
+- Users → Maintenance Requests (one-to-many)
+- Hostels → Rooms (one-to-many)
+- Rooms → Room Allocations (one-to-many)
+- Rooms → Maintenance Requests (one-to-many)
+
+NOTES FOR IMPLEMENTATION
+- Use UUIDs for primary keys
+- Implement proper indexing on foreign keys and frequently queried fields
+- Add audit trails (created_at, updated_at timestamps)
+- Consider soft deletes for data retention
+- Implement proper backup and recovery procedures
+- Use transactions for critical operations (room allocation, status updates)
+

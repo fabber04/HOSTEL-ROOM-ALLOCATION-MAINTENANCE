@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Request Room</title>
+  <link rel="stylesheet" href="../styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>Request a Room</h1>
+  </header>
+  <main class="container">
+    <div class="toolbar">
+      <nav class="nav">
+        <a href="./dashboard.html">Dashboard</a>
+        <a class="active" href="./request-room.html">Request Room</a>
+        <a href="./request-status.html">My Status</a>
+        <a href="../index.html">Logout</a>
+      </nav>
+    </div>
+    <section class="card">
+      <form class="form" onsubmit="event.preventDefault(); window.location.href='./request-status.html?state=submitted'">
+        <div class="field">
+          <label for="studentId">Student ID</label>
+          <input id="studentId" name="" placeholder="e.g., N02528843X" required />
+        </div>
+        <div class="field">
+          <label for="hostel">Preferred Hostel</label>
+          <select id="hostel" name="hostel" required>
+            <option value="">Select hostel</option>
+            <option>Alpha</option>
+            <option>Beta</option>
+            <option>Gamma</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="roomType">Room Type</label>
+          <select id="roomType" name="roomType" required>
+            <option value="">Select type</option>
+            <option>Single</option>
+            <option>Double</option>
+            <option>Quad</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="semester">Intake/Semester</label>
+          <select id="semester" name="semester" required>
+            <option value="">Select semester</option>
+            <option>March</option>
+            <option>August</option>
+          </select>
+        </div>
+        <div class="grid-2 space-top">
+          <a class="button secondary" href="./dashboard.html">Cancel</a>
+          <button class="button primary" type="submit">Submit Request</button>
+        </div>
+      </form>
+    </section>
+  </main>
+</body>
+</html>
+
+
