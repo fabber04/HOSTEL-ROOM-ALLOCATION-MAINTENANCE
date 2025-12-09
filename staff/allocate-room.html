@@ -5,6 +5,87 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Allocate Room</title>
   <link rel="stylesheet" href="../styles.css" />
+  <style>
+    .modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(4px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+      opacity: 0;
+      animation: fadeIn 0.3s ease forwards;
+    }
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    .modal {
+      background: linear-gradient(180deg, rgba(255,255,255,0.1), rgba(255,255,255,0.05));
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: var(--radius);
+      padding: var(--space-5);
+      box-shadow: 0 20px 40px rgba(0,0,0,0.5);
+      backdrop-filter: blur(12px);
+      max-width: 400px;
+      width: 90%;
+      text-align: center;
+      transform: scale(0.9) translateY(20px);
+      animation: slideUp 0.3s ease forwards;
+    }
+    @keyframes slideUp {
+      to {
+        transform: scale(1) translateY(0);
+      }
+    }
+    @keyframes fadeOut {
+      to { opacity: 0; }
+    }
+    .modal-icon {
+      width: 64px;
+      height: 64px;
+      margin: 0 auto var(--space-4);
+      background: linear-gradient(135deg, var(--color-success), #15803d);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 32px;
+      box-shadow: 0 10px 25px rgba(22, 163, 74, 0.3);
+    }
+    .modal h3 {
+      margin: 0 0 var(--space-2) 0;
+      font-size: 1.5rem;
+      color: var(--color-text);
+    }
+    .modal p {
+      margin: 0 0 var(--space-4) 0;
+      color: var(--color-muted);
+      line-height: 1.6;
+    }
+    .modal-button {
+      background: linear-gradient(135deg, var(--color-primary), #1d4ed8);
+      color: white;
+      border: none;
+      padding: var(--space-3) var(--space-5);
+      border-radius: 12px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: transform 0.1s ease, box-shadow 0.2s ease;
+      box-shadow: 0 10px 20px rgba(37, 99, 235, 0.25);
+    }
+    .modal-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 30px rgba(37, 99, 235, 0.35);
+    }
+    .modal-button:active {
+      transform: translateY(0);
+    }
+  </style>
   <script>
     function allocate(studentId, rowElement) {
       // Simulate allocation - show success and update UI
@@ -12,13 +93,40 @@
       const actionCell = row.querySelector('td:last-child');
       actionCell.innerHTML = '<span class="tag success">Allocated</span>';
       
-      // Show success message
-      alert('Room allocated successfully! Student will be notified.');
+      // Show custom modal
+      showSuccessModal();
+    }
+    
+    function showSuccessModal() {
+      const modal = document.createElement('div');
+      modal.className = 'modal-overlay';
+      modal.innerHTML = `
+        <div class="modal">
+          <div class="modal-icon">✓</div>
+          <h3>Room Allocated!</h3>
+          <p>Room has been successfully allocated. The student will be notified via email.</p>
+          <button class="modal-button" onclick="closeModal()">Continue</button>
+        </div>
+      `;
+      document.body.appendChild(modal);
       
-      // Optionally redirect to dashboard after a moment
-      setTimeout(() => {
-        window.location.href = './dashboard.html';
-      }, 1000);
+      // Close on overlay click
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) {
+          closeModal();
+        }
+      });
+    }
+    
+    function closeModal() {
+      const modal = document.querySelector('.modal-overlay');
+      if (modal) {
+        modal.style.animation = 'fadeOut 0.2s ease forwards';
+        setTimeout(() => {
+          modal.remove();
+          window.location.href = './dashboard.html';
+        }, 200);
+      }
     }
   </script>
   </head>
