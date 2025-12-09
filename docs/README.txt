@@ -34,21 +34,18 @@ What’s real vs fake
 - Real: navigation, UI components, clickable flows, success/error states.
 - Fake: authentication, data storage, policies, and backend logic.
 
-Why we chose code-first?
-
+Why code-first
 - Faster than high-fidelity design for small teams.
 - Stakeholders see something that feels like the final app.
 - Easy to extend later into a real app.
 
-Talking points for peers:
-
+Talking points for peers
 - Roles: we simulate Student and Staff without real login.
 - Room Allocation flow: request → staff assigns → student sees status.
 - Maintenance flow: student opens ticket → staff updates → student sees progress (demo via staff page).
 - Constraints: prototype only; no database or security yet.
 
-Questions:
-
+Common questions
 - Can this be mobile? Yes, but we focused on desktop for speed.
 - Can we integrate real data? Later; this phase is for validation only.
 - Is this the final UI? It’s a baseline; we can polish after feedback.

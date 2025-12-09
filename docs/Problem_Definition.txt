@@ -15,36 +15,35 @@ Goals (Prototype-Level)
 
 
 Stakeholders
-- Students
-- Wardens/Hostel Staff
-- Administration (Facilities/Accommodation Office)
 
-Constraints & Assumptions (Prototype):
+1. Students
+2. Wardens/Hostel Staff
+3. Administration (Facilities/Accommodation Office)
 
-- Desktop-first, accessible design with readable contrast.
-- Sample data only; no real data imports.
-- Two roles: Student, Staff.
+
 
 Functional Requirements (Prototype):
 
-- Students can: request rooms, view allocation status, submit maintenance requests.
-- Staff can: allocate rooms, manage waitlists/swaps (basic), update maintenance work orders and statuses.
-- System displays confirmations, errors, and current status for each action.
+1. Students can: request rooms, view allocation status, submit maintenance requests.
+2. Staff can: allocate rooms, manage waitlists/swaps (basic), update maintenance work orders and statuses.
+3. System displays confirmations, errors, and current status for each action.
 
 Nonfunctional Requirements (Prototype):
-- Usability: 3 key tasks completable by first-time users without guidance.
-- Learnability: Consistent components and predictable navigation.
-- Accessibility: Sufficient color contrast and keyboard navigation on main paths.
+
+1. Usability: 3 key tasks completable by first-time users without guidance.
+2. Learnability: Consistent components and predictable navigation.
+3. Accessibility: Sufficient color contrast and keyboard navigation on main paths.
 
 Risks & Mitigations:
-- Ambiguous allocation rules → Mitigation: limit to a simple, stated rule for prototype.
-- Misaligned expectations → Mitigation: early usability tests and written assumptions.
+
+1. Ambiguous allocation rules → Mitigation: limit to a simple, stated rule for prototype.
+2. Misaligned expectations → Mitigation: early usability tests and written assumptions.
 
 Acceptance Criteria (Prototype):
 
-- A clickable prototype covers: room request, allocation, maintenance handling.
-- Each flow includes at least one error and one success state.
-- Usability testing with 5 participants yields >80% task completion.
+1. A clickable prototype covers: room request, allocation, maintenance handling.
+2. Each flow includes at least one error and one success state.
+3. Usability testing with 5 participants yields >80% task completion.
 
 Success Measures:
 
