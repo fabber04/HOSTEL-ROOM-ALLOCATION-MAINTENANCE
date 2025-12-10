@@ -1,22 +1,22 @@
-# Use Cases Document
-## Hostel Room Allocation and Maintenance Management System
+**Use Cases Document
+**Hostel Room Allocation and Maintenance Management System
 
-## 1. Introduction
+**1. Introduction
 
 This document describes the use cases for the Hostel Room Allocation and Maintenance Management System. Use cases define the interactions between users (actors) and the system.
 
-## 2. Actors
+**2. Actors
 
-### 2.1 Primary Actors
+**2.1 Primary Actors
 - **Student**: End user who requests rooms and submits maintenance requests
 - **Staff/Warden**: Administrator who allocates rooms and manages maintenance work orders
 
-### 2.2 Secondary Actors
+**2.2 Secondary Actors
 - **System**: Automated processes and notifications
 
-## 3. Use Cases
+**3. Use Cases
 
-### UC-1: Student Requests Room Allocation
+**UC-1: Student Requests Room Allocation
 
 **Actor**: Student  
 **Preconditions**: Student is logged into the system  
@@ -38,7 +38,7 @@ This document describes the use cases for the Hostel Room Allocation and Mainten
 
 ---
 
-### UC-2: Student Views Room Allocation Status
+**UC-2: Student Views Room Allocation Status
 
 **Actor**: Student  
 **Preconditions**: Student has submitted a room request  
@@ -58,7 +58,7 @@ This document describes the use cases for the Hostel Room Allocation and Mainten
 
 ---
 
-### UC-3: Staff Allocates Room to Student
+**UC-3: Staff Allocates Room to Student
 
 **Actor**: Staff/Warden  
 **Preconditions**: Staff is logged in and pending requests exist  
@@ -79,7 +79,7 @@ This document describes the use cases for the Hostel Room Allocation and Mainten
 
 ---
 
-### UC-4: Student Submits Maintenance Request
+**UC-4: Student Submits Maintenance Request
 
 **Actor**: Student  
 **Preconditions**: Student is logged in  
@@ -101,7 +101,7 @@ This document describes the use cases for the Hostel Room Allocation and Mainten
 
 ---
 
-### UC-5: Staff Views Maintenance Work Orders
+**UC-5: Staff Views Maintenance Work Orders
 
 **Actor**: Staff/Warden  
 **Preconditions**: Staff is logged in  
@@ -120,7 +120,7 @@ This document describes the use cases for the Hostel Room Allocation and Mainten
 
 ---
 
-### UC-6: Staff Updates Maintenance Work Order Status
+**UC-6: Staff Updates Maintenance Work Order Status
 
 **Actor**: Staff/Warden  
 **Preconditions**: Staff is viewing work orders page  
@@ -140,7 +140,7 @@ This document describes the use cases for the Hostel Room Allocation and Mainten
 
 ---
 
-### UC-7: Student Views Dashboard
+**UC-7: Student Views Dashboard
 
 **Actor**: Student  
 **Preconditions**: Student is logged in  
@@ -156,7 +156,7 @@ This document describes the use cases for the Hostel Room Allocation and Mainten
 
 ---
 
-### UC-8: Staff Views Dashboard
+**UC-8: Staff Views Dashboard
 
 **Actor**: Staff/Warden  
 **Preconditions**: Staff is logged in  
@@ -172,7 +172,7 @@ This document describes the use cases for the Hostel Room Allocation and Mainten
 
 ---
 
-## 4. Use Case Diagram
+**4. Use Case Diagram
 
 ```
                     ┌─────────┐
@@ -202,24 +202,24 @@ This document describes the use cases for the Hostel Room Allocation and Mainten
                     └─────────┘
 ```
 
-## 5. Non-Functional Requirements
+**5. Non-Functional Requirements
 
-### 5.1 Usability
+**5.1 Usability
 - All use cases should be completable by first-time users without training
 - Interface should be intuitive and self-explanatory
 - Error messages should be clear and actionable
 
-### 5.2 Performance
+**5.2 Performance
 - Page load time should be under 2 seconds
 - Form submissions should provide immediate feedback
 - Status updates should be visible in real-time
 
-### 5.3 Accessibility
+**5.3 Accessibility
 - Sufficient color contrast for readability
 - Keyboard navigation support
 - Screen reader compatibility (future implementation)
 
-## 6. Future Use Cases
+**6. Future Use Cases
 
 1. **Room Swapping**: Students can request to swap rooms
 2. **Waitlist Management**: Automatic waitlist when rooms are full
