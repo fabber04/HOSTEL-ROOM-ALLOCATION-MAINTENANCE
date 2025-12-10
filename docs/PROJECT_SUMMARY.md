@@ -77,23 +77,25 @@ A web-based prototype system that provides:
 ## 4. Key Achievements
 
 ### 4.1 User Experience
-- ✅ Intuitive navigation and clear workflows
-- ✅ Professional, modern UI design
-- ✅ Custom modal popups replacing browser alerts
-- ✅ Consistent design language throughout
+
+- Intuitive navigation and clear workflows
+- Professional, modern UI design
+- Custom modal popups replacing browser alerts
+- Consistent design language throughout
 
 ### 4.2 Functionality
-- ✅ Complete room allocation workflow
-- ✅ Maintenance request management
-- ✅ Status tracking and updates
-- ✅ Error and success state handling
+
+- Complete room allocation workflow
+- Maintenance request management
+- Status tracking and updates
+- Error and success state handling
 
 ### 4.3 Documentation
-- ✅ Problem definition and requirements
-- ✅ System architecture documentation
-- ✅ Use cases and user stories
-- ✅ Database design for future implementation
-- ✅ Presentation materials
+- Problem definition and requirements
+- System architecture documentation
+- Use cases and user stories
+- Database design for future implementation
+- Presentation materials
 
 ## 5. Project Methodology
 
@@ -121,11 +123,6 @@ A web-based prototype system that provides:
 - Gathered feedback on UI/UX
 - Achieved >80% task completion rate
 
-### 6.2 Acceptance Criteria Met
-- ✅ Clickable prototype covering all key flows
-- ✅ Error and success states implemented
-- ✅ Usability testing completed
-- ✅ Clear, consistent navigation
 
 ## 7. Challenges and Solutions
 
@@ -173,14 +170,14 @@ The system is ready for:
 
 ## 10. Deliverables
 
-1. ✅ Functional prototype (HTML/CSS/JavaScript)
-2. ✅ Problem definition document
-3. ✅ System architecture documentation
-4. ✅ Use cases document
-5. ✅ Database design documentation
-6. ✅ Presentation materials
-7. ✅ Project summary report
-8. ✅ README and user guide
+1. Functional prototype (HTML/CSS/JavaScript)
+2. Problem definition document
+3. System architecture documentation
+4. Use cases document
+5. Database design documentation
+6. Presentation materials
+7. Project summary report
+8. README and user guide
 
 ---
 
